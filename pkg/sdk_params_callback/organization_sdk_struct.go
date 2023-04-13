@@ -1,7 +1,7 @@
 package sdk_params_callback
 
 import (
-	"open_im_sdk/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
 )
 
 type UserInDepartment struct {

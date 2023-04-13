@@ -3,14 +3,15 @@ package test
 import (
 	"encoding/json"
 	"net/url"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
-	"open_im_sdk/ws_wrapper/test/client"
-	"open_im_sdk/ws_wrapper/ws_local_server"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
+	"github.com/erbaner/be-core/ws_wrapper/test/client"
+	"github.com/erbaner/be-core/ws_wrapper/ws_local_server"
 
 	"github.com/gorilla/websocket"
 )

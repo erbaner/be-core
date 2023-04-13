@@ -3,17 +3,19 @@ package db
 import (
 	"errors"
 	"fmt"
+
 	//"github.com/glebarez/sqlite"
 	"gorm.io/driver/sqlite"
 
-	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 var UserDBMap map[string]*DataBase

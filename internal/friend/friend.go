@@ -16,18 +16,19 @@ package friend
 
 import (
 	"errors"
-	comm "open_im_sdk/internal/common"
-	ws "open_im_sdk/internal/interaction"
-	"open_im_sdk/internal/user"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/db/db_interface"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/log"
-	sdk "open_im_sdk/pkg/sdk_params_callback"
-	api "open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
+
+	comm "github.com/erbaner/be-core/internal/common"
+	ws "github.com/erbaner/be-core/internal/interaction"
+	"github.com/erbaner/be-core/internal/user"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/db/db_interface"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/log"
+	sdk "github.com/erbaner/be-core/pkg/sdk_params_callback"
+	api "github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type Friend struct {

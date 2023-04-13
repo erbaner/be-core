@@ -9,18 +9,19 @@ package ws_local_server
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"net/http"
 	_ "net/http/pprof"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/log"
-	utils2 "open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
-	"open_im_sdk/ws_wrapper/utils"
 	"runtime"
 	"runtime/debug"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/log"
+	utils2 "github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
+	"github.com/erbaner/be-core/ws_wrapper/utils"
+	"github.com/gorilla/websocket"
 )
 
 const WriteTimeoutSeconds = 30

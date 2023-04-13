@@ -1,11 +1,11 @@
 package full
 
 import (
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/sdk_params_callback"
-	"open_im_sdk/pkg/utils"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/sdk_params_callback"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func (u *Full) GetUsersInfo(callback open_im_sdk_callback.Base, userIDList string, operationID string) {

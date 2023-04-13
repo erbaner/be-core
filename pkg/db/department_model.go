@@ -2,9 +2,10 @@ package db
 
 import (
 	"fmt"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
 	"strings"
+
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func (d *DataBase) GetSubDepartmentList(departmentID string, args ...int) ([]*model_struct.LocalDepartment, error) {

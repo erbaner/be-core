@@ -1,8 +1,8 @@
 package indexdb
 
 import (
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type LocalGroups struct{}
@@ -17,7 +17,7 @@ func (i *LocalGroups) DeleteGroup(groupID string) error {
 	return err
 }
 
-//该函数需要全更新
+// 该函数需要全更新
 func (i *LocalGroups) UpdateGroup(groupInfo *model_struct.LocalGroup) error {
 	_, err := Exec(groupInfo.GroupID, utils.StructToJsonString(groupInfo))
 	return err

@@ -2,9 +2,10 @@ package db
 
 import (
 	"errors"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
+
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 
 	"gorm.io/gorm"
 )
@@ -142,8 +143,8 @@ func (d *DataBase) ConversationIfExists(conversationID string) (bool, error) {
 	}
 }
 
-//Reset the conversation is equivalent to deleting the conversation,
-//and the GetAllConversation or GetConversationListSplit interface will no longer be obtained.
+// Reset the conversation is equivalent to deleting the conversation,
+// and the GetAllConversation or GetConversationListSplit interface will no longer be obtained.
 func (d *DataBase) ResetConversation(conversationID string) error {
 	d.mRWMutex.Lock()
 	defer d.mRWMutex.Unlock()
@@ -155,8 +156,8 @@ func (d *DataBase) ResetConversation(conversationID string) error {
 	return utils.Wrap(t.Error, "ResetConversation failed")
 }
 
-//Reset ALL conversation is equivalent to deleting the conversation,
-//and the GetAllConversation or GetConversationListSplit interface will no longer be obtained.
+// Reset ALL conversation is equivalent to deleting the conversation,
+// and the GetAllConversation or GetConversationListSplit interface will no longer be obtained.
 func (d *DataBase) ResetAllConversation() error {
 	d.mRWMutex.Lock()
 	defer d.mRWMutex.Unlock()
@@ -168,9 +169,9 @@ func (d *DataBase) ResetAllConversation() error {
 	return utils.Wrap(t.Error, "ResetConversation failed")
 }
 
-//Clear the conversation, which is used to delete the conversation history message and clear the conversation at the same time.
-//The GetAllConversation or GetConversationListSplit interface can still be obtained,
-//but there is no latest message.
+// Clear the conversation, which is used to delete the conversation history message and clear the conversation at the same time.
+// The GetAllConversation or GetConversationListSplit interface can still be obtained,
+// but there is no latest message.
 func (d *DataBase) ClearConversation(conversationID string) error {
 	d.mRWMutex.Lock()
 	defer d.mRWMutex.Unlock()
@@ -182,9 +183,9 @@ func (d *DataBase) ClearConversation(conversationID string) error {
 	return utils.Wrap(t.Error, "ClearConversation failed")
 }
 
-//Clear All conversation, which is used to delete the conversation history message and clear the conversation at the same time.
-//The GetAllConversation or GetConversationListSplit interface can still be obtained,
-//but there is no latest message.
+// Clear All conversation, which is used to delete the conversation history message and clear the conversation at the same time.
+// The GetAllConversation or GetConversationListSplit interface can still be obtained,
+// but there is no latest message.
 func (d *DataBase) ClearAllConversation() error {
 	d.mRWMutex.Lock()
 	defer d.mRWMutex.Unlock()

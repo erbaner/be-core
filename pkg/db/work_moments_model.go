@@ -2,9 +2,10 @@ package db
 
 import (
 	"errors"
-	"gorm.io/gorm"
-	"open_im_sdk/pkg/utils"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/utils"
+	"gorm.io/gorm"
 )
 
 type LocalWorkMomentsNotification struct {

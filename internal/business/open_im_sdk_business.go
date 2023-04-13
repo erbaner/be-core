@@ -1,8 +1,8 @@
 package business
 
 import (
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/log"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/log"
 )
 
 func (w *Business) SetListener(callback open_im_sdk_callback.OnCustomBusinessListener) {

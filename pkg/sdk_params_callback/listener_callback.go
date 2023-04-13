@@ -1,11 +1,11 @@
 package sdk_params_callback
 
 import (
-	"open_im_sdk/pkg/db/model_struct"
-	api "open_im_sdk/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	api "github.com/erbaner/be-core/pkg/server_api_params"
 )
 
-////////////////////////////////friend////////////////////////////////////
+// //////////////////////////////friend////////////////////////////////////
 type FriendApplicationAddedCallback model_struct.LocalFriendRequest
 type FriendApplicationAcceptCallback model_struct.LocalFriendRequest
 type FriendApplicationRejectCallback model_struct.LocalFriendRequest
@@ -29,14 +29,14 @@ type GroupApplicationRejectCallback model_struct.LocalAdminGroupRequest
 type GroupInfoChangedCallback model_struct.LocalGroup
 type GroupMemberInfoChangedCallback model_struct.LocalGroupMember
 
-//////////////////////////////user////////////////////////////////////////
+// ////////////////////////////user////////////////////////////////////////
 type SelfInfoUpdatedCallback model_struct.LocalUser
 
-//////////////////////////////user////////////////////////////////////////
+// ////////////////////////////user////////////////////////////////////////
 type ConversationUpdateCallback model_struct.LocalConversation
 type ConversationDeleteCallback model_struct.LocalConversation
 
-/////////////////////////////signaling/////////////////////////////////////
+// ///////////////////////////signaling/////////////////////////////////////
 type InvitationInfo struct {
 	InviterUserID     string
 	InviteeUserIDList []string

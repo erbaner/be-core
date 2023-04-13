@@ -2,9 +2,9 @@ package common
 
 //import (
 //	"github.com/mitchellh/mapstructure"
-//	"open_im_sdk/open_im_sdk_callback"
-//	"open_im_sdk/pkg/db"
-//	"open_im_sdk/pkg/db/model_struct"
+//	"github.com/erbaner/be-core/open_im_sdk_callback"
+//	"github.com/erbaner/be-core/pkg/db"
+//	"github.com/erbaner/be-core/pkg/db/model_struct"
 //)
 //
 //func GetGroupMemberListByGroupID(callback open_im_sdk_callback.Base, operationID string, db *db.DataBase, groupID string) []*model_struct.LocalGroupMember {

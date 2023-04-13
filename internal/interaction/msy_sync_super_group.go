@@ -1,9 +1,10 @@
 package interaction
 
 import (
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/db"
 	"sync"
+
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/db"
 )
 
 type SuperGroupMsgSync struct {

@@ -3,15 +3,16 @@ package ws_local_server
 import (
 	"encoding/json"
 	"errors"
-	"github.com/gorilla/websocket"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/sdk_struct"
-	"open_im_sdk/ws_wrapper/utils"
 	"reflect"
 	"runtime"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/sdk_struct"
+	"github.com/erbaner/be-core/ws_wrapper/utils"
+	"github.com/gorilla/websocket"
 )
 
 type EventData struct {
@@ -28,7 +29,7 @@ type BaseSuccessFailed struct {
 	uid         string
 }
 
-//e.g open_im_sdk/open_im_sdk.Login ->Login
+// e.g open_im_sdk/open_im_sdk.Login ->Login
 func cleanUpfuncName(funcName string) string {
 	end := strings.LastIndex(funcName, ".")
 	if end == -1 {
@@ -150,7 +151,7 @@ func (wsRouter *WsFuncRouter) GlobalSendMessage(data interface{}) {
 	SendOneUserMessage(data, wsRouter.uId)
 }
 
-//listener
+// listener
 func SendOneUserMessage(data interface{}, uid string) {
 	var chMsg ChanMsg
 	chMsg.data, _ = json.Marshal(data)

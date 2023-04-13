@@ -5,15 +5,16 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	ws "open_im_sdk/internal/interaction"
-	"open_im_sdk/internal/login"
-	common2 "open_im_sdk/internal/obj_storage"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
 	"strings"
+
+	ws "github.com/erbaner/be-core/internal/interaction"
+	"github.com/erbaner/be-core/internal/login"
+	common2 "github.com/erbaner/be-core/internal/obj_storage"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
 /*

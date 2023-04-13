@@ -15,14 +15,14 @@
 package friend
 
 import (
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/log"
-	sdk "open_im_sdk/pkg/sdk_params_callback"
-	"open_im_sdk/pkg/utils"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/log"
+	sdk "github.com/erbaner/be-core/pkg/sdk_params_callback"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
-//f
+// f
 func (f *Friend) GetDesignatedFriendsInfo(callback open_im_sdk_callback.Base, friendUserIDList string, operationID string) {
 	if callback == nil {
 		log.Error(operationID, "callback is nil")
@@ -145,7 +145,7 @@ func (f *Friend) DeleteFriend(callback open_im_sdk_callback.Base, friendUserID s
 	}()
 }
 
-//f
+// f
 func (f *Friend) GetFriendList(callback open_im_sdk_callback.Base, operationID string) {
 	if callback == nil {
 		log.Error(operationID, "callback is nil")

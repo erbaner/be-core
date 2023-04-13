@@ -5,19 +5,23 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
 
-	"github.com/tencentyun/cos-go-sdk-v5"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+
 	"math/rand"
 	"net/http"
 	"net/url"
-	ws "open_im_sdk/internal/interaction"
-	//	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
+
+	ws "github.com/erbaner/be-core/internal/interaction"
+	"github.com/tencentyun/cos-go-sdk-v5"
+
+	//	"github.com/erbaner/be-core/pkg/constant"
 	"path"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type COS struct {

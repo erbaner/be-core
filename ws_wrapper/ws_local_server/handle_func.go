@@ -8,10 +8,11 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
 	"reflect"
 	"runtime"
+
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
 )
 
 type Req struct {

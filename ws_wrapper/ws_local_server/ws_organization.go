@@ -2,9 +2,10 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type OrganizationCallback struct {
@@ -115,7 +116,7 @@ func (wsRouter *WsFuncRouter) SearchOrganization(input, operationID string) {
 	}
 
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
-	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), m, "input","offset","count") {
+	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), m, "input", "offset", "count") {
 		return
 	}
 	userWorker.Organization().SearchOrganization(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId},

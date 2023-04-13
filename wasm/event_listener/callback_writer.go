@@ -1,8 +1,9 @@
 package event_listener
 
 import (
-	"open_im_sdk/pkg/utils"
 	"syscall/js"
+
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type CallbackWriter interface {

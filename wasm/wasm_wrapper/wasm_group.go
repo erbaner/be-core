@@ -1,15 +1,16 @@
+//go:build js && wasm
 // +build js,wasm
 
 package wasm_wrapper
 
 import (
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/wasm/event_listener"
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/wasm/event_listener"
 	"syscall/js"
 )
 
-//------------------------------------group---------------------------
+// ------------------------------------group---------------------------
 type WrapperGroup struct {
 	*WrapperCommon
 }

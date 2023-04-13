@@ -2,20 +2,21 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
+// import (
 //
-//import (
 //	"encoding/json"
-//	"open_im_sdk/open_im_sdk"
-//)
+//	"github.com/erbaner/be-core/open_im_sdk"
 //
+// )
 func (wsRouter *WsFuncRouter) CreateTextMessage(input string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), nil) {
@@ -580,7 +581,7 @@ func (wsRouter *WsFuncRouter) GetHistoryMessageListReverse(getMessageOptions str
 	userWorker.Conversation().GetHistoryMessageListReverse(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, getMessageOptions, operationID)
 }
 
-//deprecated
+// deprecated
 func (wsRouter *WsFuncRouter) RevokeMessage(message string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, message, operationID, runFuncName(), nil) {
@@ -870,19 +871,19 @@ func (wsRouter *WsFuncRouter) ClearGroupHistoryMessageFromLocalAndSvr(input stri
 	userWorker.Conversation().ClearGroupHistoryMessageFromLocalAndSvr(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, input, operationID)
 }
 
-//func (wsRouter *WsFuncRouter) SetSdkLog(input string, operationID string) {
-//	m := make(map[string]interface{})
-//	if err := json.Unmarshal([]byte(input), &m); err != nil {
-//		log.Info("unmarshal failed")
-//		wsRouter.GlobalSendMessage(EventData{cleanUpfuncName(runFuncName()), StatusBadParameter, "unmarshal failed", "", operationID})
-//		return
+//	func (wsRouter *WsFuncRouter) SetSdkLog(input string, operationID string) {
+//		m := make(map[string]interface{})
+//		if err := json.Unmarshal([]byte(input), &m); err != nil {
+//			log.Info("unmarshal failed")
+//			wsRouter.GlobalSendMessage(EventData{cleanUpfuncName(runFuncName()), StatusBadParameter, "unmarshal failed", "", operationID})
+//			return
+//		}
+//		if !wsRouter.checkKeysIn(input, operationID, runFuncName(), m, "flag") {
+//			return
+//		}
+//		userWorker := init.GetUserWorker(wsRouter.uId)
+//		userWorker.SetSdkLog(m["flag"].(int32))
 //	}
-//	if !wsRouter.checkKeysIn(input, operationID, runFuncName(), m, "flag") {
-//		return
-//	}
-//	userWorker := init.GetUserWorker(wsRouter.uId)
-//	userWorker.SetSdkLog(m["flag"].(int32))
-//}
 func (wsRouter *WsFuncRouter) GetAtAllTag(input string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), nil) {

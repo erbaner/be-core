@@ -1,11 +1,12 @@
 package main
 
 import (
-	"open_im_sdk/pkg/db"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/test"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/db"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/test"
 )
 
 var allDB []*db.DataBase

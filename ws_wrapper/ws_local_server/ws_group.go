@@ -2,9 +2,10 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type GroupCallback struct {
@@ -411,7 +412,7 @@ func (wsRouter *WsFuncRouter) SearchGroupMembers(input string, operationID strin
 		m["searchParam"].(string), operationID)
 }
 
-//SetGroupApplyMemberFriend
+// SetGroupApplyMemberFriend
 func (wsRouter *WsFuncRouter) SetGroupApplyMemberFriend(input string, operationID string) {
 	m := make(map[string]interface{})
 	if err := json.Unmarshal([]byte(input), &m); err != nil {
@@ -427,7 +428,7 @@ func (wsRouter *WsFuncRouter) SetGroupApplyMemberFriend(input string, operationI
 		int32(m["rule"].(float64)), m["groupID"].(string), operationID)
 }
 
-//SetGroupApplyMemberFriend
+// SetGroupApplyMemberFriend
 func (wsRouter *WsFuncRouter) SetGroupLookMemberInfo(input string, operationID string) {
 	m := make(map[string]interface{})
 	if err := json.Unmarshal([]byte(input), &m); err != nil {

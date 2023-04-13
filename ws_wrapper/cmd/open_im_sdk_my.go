@@ -9,11 +9,12 @@ package main
 import (
 	"flag"
 	"fmt"
-	"open_im_sdk/sdk_struct"
-	"open_im_sdk/ws_wrapper/utils"
-	"open_im_sdk/ws_wrapper/ws_local_server"
 	"runtime"
 	"sync"
+
+	"github.com/erbaner/be-core/sdk_struct"
+	"github.com/erbaner/be-core/ws_wrapper/utils"
+	"github.com/erbaner/be-core/ws_wrapper/ws_local_server"
 )
 
 func main() {

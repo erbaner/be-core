@@ -2,10 +2,11 @@ package client
 
 import (
 	"encoding/json"
-	"open_im_sdk/pkg/network"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
 	"sync"
+
+	"github.com/erbaner/be-core/pkg/network"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 
 	"github.com/gorilla/websocket"
 )

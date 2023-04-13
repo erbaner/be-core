@@ -1,9 +1,10 @@
 package main
 
 import (
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/wasm/wasm_wrapper"
 	"runtime/debug"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/wasm/wasm_wrapper"
 
 	"syscall/js"
 )

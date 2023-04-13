@@ -1,18 +1,19 @@
 package test
 
 import (
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/sdk_params_callback"
-	"open_im_sdk/pkg/server_api_params"
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/sdk_params_callback"
+	"github.com/erbaner/be-core/pkg/server_api_params"
 
 	//	"encoding/json"
 	"fmt"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
-	//"open_im_sdk/internal/open_im_sdk"
-	//"open_im_sdk/pkg/utils"
-	//	"open_im_sdk/internal/common"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	//"github.com/erbaner/be-core/internal/open_im_sdk"
+	//"github.com/erbaner/be-core/pkg/utils"
+	//	"github.com/erbaner/be-core/internal/common"
 )
 
 type XBase struct {

@@ -2,9 +2,10 @@ package main
 
 import (
 	"flag"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/test"
+
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/test"
 )
 
 func main() {

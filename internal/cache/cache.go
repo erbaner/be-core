@@ -2,11 +2,12 @@ package cache
 
 import (
 	"errors"
-	"open_im_sdk/internal/friend"
-	"open_im_sdk/internal/user"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
 	"sync"
+
+	"github.com/erbaner/be-core/internal/friend"
+	"github.com/erbaner/be-core/internal/user"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type UserInfo struct {

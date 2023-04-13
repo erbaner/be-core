@@ -3,9 +3,10 @@ package db
 import (
 	"errors"
 	"fmt"
+
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 	"gorm.io/gorm"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
 )
 
 func (d *DataBase) InsertGroup(groupInfo *model_struct.LocalGroup) error {

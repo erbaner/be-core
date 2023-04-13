@@ -3,16 +3,17 @@ package test
 import (
 	"encoding/json"
 	"fmt"
-	"open_im_sdk/internal/login"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/sdk_params_callback"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
 	"sync"
+
+	"github.com/erbaner/be-core/internal/login"
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/sdk_params_callback"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
 //func DotestSetConversationRecvMessageOpt() {

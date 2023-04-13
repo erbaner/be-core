@@ -1,9 +1,9 @@
 package common
 
 import (
+	api "github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 	"github.com/golang/protobuf/proto"
-	api "open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
 )
 
 func UnmarshalTips(msg *api.MsgData, detail proto.Message) error {

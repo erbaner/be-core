@@ -1,9 +1,10 @@
 package login
 
 import (
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/log"
 	"sync"
+
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/log"
 )
 
 func (u *LoginMgr) Login(callback open_im_sdk_callback.Base, userID, token string, operationID string) {

@@ -3,15 +3,16 @@ package interaction
 import (
 	"encoding/json"
 	"errors"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/network"
-	"open_im_sdk/pkg/utils"
 	"time"
+
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/network"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
-//no share
+// no share
 type PostApi struct {
 	token      string
 	apiAddress string

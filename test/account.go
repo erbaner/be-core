@@ -3,15 +3,16 @@ package test
 import (
 	"encoding/json"
 	"net"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/network"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
 	"os"
 	"strconv"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/network"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func GenUid(uid int, prefix string) string {

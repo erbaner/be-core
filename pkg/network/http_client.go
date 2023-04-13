@@ -8,8 +8,9 @@ import (
 
 	"io/ioutil"
 	"net/http"
-	"open_im_sdk/pkg/utils"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func get(url string) (response []byte, err error) {
@@ -37,7 +38,7 @@ func retry(url string, data interface{}, token string, attempts int, sleep time.
 	return b, nil
 }
 
-//application/json; charset=utf-8
+// application/json; charset=utf-8
 func Post2Api(url string, data interface{}, token string) (content []byte, err error) {
 	c, err := postLogic(url, data, token)
 	return c, utils.Wrap(err, " post")

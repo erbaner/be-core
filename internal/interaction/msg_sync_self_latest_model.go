@@ -1,9 +1,9 @@
 package interaction
 
 import (
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/db"
-	"open_im_sdk/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/db"
+	"github.com/erbaner/be-core/pkg/server_api_params"
 )
 
 type SelfMsgSyncLatestModel struct {

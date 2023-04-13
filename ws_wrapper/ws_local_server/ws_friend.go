@@ -2,9 +2,10 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type FriendCallback struct {
@@ -46,7 +47,7 @@ func (wsRouter *WsFuncRouter) SetFriendListener() {
 	userWorker.SetFriendListener(&fr)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) GetDesignatedFriendsInfo(userIDList string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, userIDList, operationID, runFuncName(), nil) {
@@ -55,7 +56,7 @@ func (wsRouter *WsFuncRouter) GetDesignatedFriendsInfo(userIDList string, operat
 	userWorker.Friend().GetDesignatedFriendsInfo(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, userIDList, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) AddFriend(paramsReq string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, paramsReq, operationID, runFuncName(), nil) {
@@ -80,7 +81,7 @@ func (wsRouter *WsFuncRouter) GetSendFriendApplicationList(input string, operati
 	userWorker.Friend().GetSendFriendApplicationList(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) AcceptFriendApplication(params string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, params, operationID, runFuncName(), nil) {
@@ -89,7 +90,7 @@ func (wsRouter *WsFuncRouter) AcceptFriendApplication(params string, operationID
 	userWorker.Friend().AcceptFriendApplication(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, params, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) RefuseFriendApplication(params string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, params, operationID, runFuncName(), nil) {
@@ -98,7 +99,7 @@ func (wsRouter *WsFuncRouter) RefuseFriendApplication(params string, operationID
 	userWorker.Friend().RefuseFriendApplication(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, params, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) CheckFriend(userIDList string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, userIDList, operationID, runFuncName(), nil) {
@@ -107,7 +108,7 @@ func (wsRouter *WsFuncRouter) CheckFriend(userIDList string, operationID string)
 	userWorker.Friend().CheckFriend(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, userIDList, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) DeleteFriend(friendUserID string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, friendUserID, operationID, runFuncName(), nil) {
@@ -116,7 +117,7 @@ func (wsRouter *WsFuncRouter) DeleteFriend(friendUserID string, operationID stri
 	userWorker.Friend().DeleteFriend(&BaseSuccessFailed{runFuncName(), operationID, wsRouter.uId}, friendUserID, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) GetFriendList(input string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), nil) {
@@ -139,7 +140,7 @@ func (wsRouter *WsFuncRouter) SearchFriends(input string, operationID string) {
 		input, operationID)
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) SetFriendRemark(remark string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, remark, operationID, runFuncName(), nil) {

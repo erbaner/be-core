@@ -4,12 +4,14 @@ import (
 	"crypto/md5"
 	"encoding/hex"
 	"encoding/json"
+
+	"github.com/erbaner/be-core/pkg/constant"
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
-	"open_im_sdk/pkg/constant"
+
+	"reflect"
 
 	"github.com/pkg/errors"
-	"reflect"
 
 	"math/rand"
 	"runtime"
@@ -38,17 +40,17 @@ func GetCurrentTimestampBySecond() int64 {
 	return time.Now().Unix()
 }
 
-//Get the current timestamp by Mill
+// Get the current timestamp by Mill
 func GetCurrentTimestampByMill() int64 {
 	return time.Now().UnixNano() / 1e6
 }
 
-//Convert nano timestamp to time.Time type
+// Convert nano timestamp to time.Time type
 func UnixNanoSecondToTime(nanoSecond int64) time.Time {
 	return time.Unix(0, nanoSecond)
 }
 
-//Get the current timestamp by Nano
+// Get the current timestamp by Nano
 func GetCurrentTimestampByNano() int64 {
 	return time.Now().UnixNano()
 }
@@ -66,7 +68,7 @@ func StructToJsonStringDefault(param interface{}) string {
 	return StructToJsonString(param)
 }
 
-//The incoming parameter must be a pointer
+// The incoming parameter must be a pointer
 func JsonStringToStruct(s string, args interface{}) error {
 	return Wrap(json.Unmarshal([]byte(s), args), "json Unmarshal failed")
 }
@@ -207,7 +209,7 @@ type LogInfo struct {
 	Info string `json:"info"`
 }
 
-//judge a string whether in the  string list
+// judge a string whether in the  string list
 func IsContain(target string, List []string) bool {
 
 	for _, element := range List {
@@ -325,9 +327,11 @@ func RemoveRepeatedStringInList(slc []string) []string {
 	return result
 }
 
-/**
+/*
+*
 KMP
-**/
+*
+*/
 func KMP(rMainString string, rSubString string) (isInMainString bool) {
 	mainString := strings.ToLower(rMainString)
 	subString := strings.ToLower(rSubString)
@@ -392,7 +396,7 @@ func TrimStringList(list []string) (result []string) {
 
 }
 
-//Get the intersection of two slices
+// Get the intersection of two slices
 func Intersect(slice1, slice2 []uint32) []uint32 {
 	m := make(map[uint32]bool)
 	n := make([]uint32, 0)
@@ -408,7 +412,7 @@ func Intersect(slice1, slice2 []uint32) []uint32 {
 	return n
 }
 
-//Get the diff of two slices
+// Get the diff of two slices
 func DifferenceSubset(mainSlice, subSlice []uint32) []uint32 {
 	m := make(map[uint32]bool)
 	n := make([]uint32, 0)

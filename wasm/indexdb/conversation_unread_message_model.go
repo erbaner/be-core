@@ -1,8 +1,8 @@
 package indexdb
 
 import (
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type LocalConversationUnreadMessages struct {

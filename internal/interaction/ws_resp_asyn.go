@@ -2,10 +2,11 @@ package interaction
 
 import (
 	"errors"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type GeneralWsResp struct {

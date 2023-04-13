@@ -3,12 +3,13 @@ package event_listener
 import (
 	"bytes"
 	"errors"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 	"reflect"
 	"strconv"
 	"strings"
 	"syscall/js"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type Caller interface {
@@ -42,12 +43,12 @@ func NewCaller(funcName interface{}, callback CallbackWriter, arguments *[]js.Va
 	return &ReflectCall{funcName: funcName, callback: callback, arguments: *arguments}
 }
 
-//func (r *ReflectCall) NewCaller(funcName interface{}, callback CallbackWriter, arguments *[]js.Value) Caller {
-//	r.funcName = funcName
-//	r.callback = callback
-//	r.arguments = *arguments
-//	return r
-//}
+//	func (r *ReflectCall) NewCaller(funcName interface{}, callback CallbackWriter, arguments *[]js.Value) Caller {
+//		r.funcName = funcName
+//		r.callback = callback
+//		r.arguments = *arguments
+//		return r
+//	}
 func (r *ReflectCall) AsyncCallWithCallback() interface{} {
 	return r.callback.HandlerFunc(r.asyncCallWithCallback)
 

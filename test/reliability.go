@@ -4,14 +4,15 @@ import (
 	"fmt"
 	"io/ioutil"
 	"math/rand"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 	"os"
 	"runtime"
 	"strconv"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func GetFileContentAsStringLines(filePath string) ([]string, error) {

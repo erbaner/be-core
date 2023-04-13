@@ -6,17 +6,18 @@ import (
 	"encoding/gob"
 	"errors"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"net/http"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
+	"github.com/gorilla/websocket"
 )
 
 const writeTimeoutSeconds = 30

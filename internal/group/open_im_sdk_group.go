@@ -1,13 +1,13 @@
 package group
 
 import (
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/common"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/sdk_params_callback"
-	api "open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/common"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/sdk_params_callback"
+	api "github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func (g *Group) SetGroupListener(callback open_im_sdk_callback.OnGroupListener) {
@@ -255,7 +255,7 @@ func (g *Group) GetGroupMemberOwnerAndAdmin(callback open_im_sdk_callback.Base, 
 	}()
 }
 
-//getGroupMemberListByJoinTimeFilter
+// getGroupMemberListByJoinTimeFilter
 func (g *Group) GetGroupMemberListByJoinTimeFilter(callback open_im_sdk_callback.Base, groupID string, offset, count int32, joinTimeBegin, joinTimeEnd int64, filterUserID, operationID string) {
 	if callback == nil {
 		return

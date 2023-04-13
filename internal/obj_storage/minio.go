@@ -5,19 +5,20 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	minio "github.com/minio/minio-go/v7"
-	"github.com/minio/minio-go/v7/pkg/credentials"
 	"math/rand"
 	"net/url"
 	_ "net/url"
-	ws "open_im_sdk/internal/interaction"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
 	"os"
 	"path"
 	"time"
+
+	ws "github.com/erbaner/be-core/internal/interaction"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
+	minio "github.com/minio/minio-go/v7"
+	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
 type Minio struct {

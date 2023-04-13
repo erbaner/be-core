@@ -2,15 +2,16 @@ package ws_local_server
 
 import (
 	"encoding/json"
-	"open_im_sdk/internal/login"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 
-	//	"open_im_sdk/pkg/constant"
-	//	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
+	"github.com/erbaner/be-core/internal/login"
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
+
+	//	"github.com/erbaner/be-core/pkg/constant"
+	//	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
 type InitCallback struct {
@@ -154,7 +155,7 @@ func (wsRouter *WsFuncRouter) GetLoginStatus(input string, operationID string) {
 	wsRouter.GlobalSendMessage(EventData{cleanUpfuncName(runFuncName()), 0, "", int32ToString(int32(userWorker.GetLoginStatus())), operationID})
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) getMyLoginStatus() int32 {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, "", "", runFuncName(), nil) {
@@ -163,7 +164,7 @@ func (wsRouter *WsFuncRouter) getMyLoginStatus() int32 {
 	return userWorker.GetLoginStatus()
 }
 
-//1
+// 1
 func (wsRouter *WsFuncRouter) GetLoginUser(input string, operationID string) {
 	userWorker := open_im_sdk.GetUserWorker(wsRouter.uId)
 	if !wsRouter.checkResourceLoadingAndKeysIn(userWorker, input, operationID, runFuncName(), nil) {

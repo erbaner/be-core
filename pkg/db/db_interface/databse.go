@@ -1,10 +1,10 @@
 package db_interface
 
 import (
-	"open_im_sdk/pkg/db"
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/sdk_struct"
+	"github.com/erbaner/be-core/pkg/db"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
 type DataBase interface {

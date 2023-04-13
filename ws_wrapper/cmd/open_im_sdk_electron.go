@@ -3,18 +3,21 @@ package main
 import (
 	"flag"
 	"fmt"
-	"open_im_sdk/open_im_sdk"
+
+	"github.com/erbaner/be-core/open_im_sdk"
 
 	//	_ "net/http/pprof"
 	_ "net/http/pprof"
-	"open_im_sdk/sdk_struct"
 
-	//"open_im_sdk/open_im_sdk"
+	"github.com/erbaner/be-core/sdk_struct"
 
-	"open_im_sdk/ws_wrapper/utils"
-	"open_im_sdk/ws_wrapper/ws_local_server"
+	//"github.com/erbaner/be-core/open_im_sdk"
+
 	"runtime"
 	"sync"
+
+	"github.com/erbaner/be-core/ws_wrapper/utils"
+	"github.com/erbaner/be-core/ws_wrapper/ws_local_server"
 )
 
 func main() {

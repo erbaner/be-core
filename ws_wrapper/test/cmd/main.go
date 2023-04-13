@@ -4,9 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"open_im_sdk/ws_wrapper/test"
-	"open_im_sdk/ws_wrapper/test/client"
 	"time"
+
+	"github.com/erbaner/be-core/ws_wrapper/test"
+	"github.com/erbaner/be-core/ws_wrapper/test/client"
 )
 
 var jssdkURL = flag.String("url", "ws://43.155.69.205:10003/", "jssdk URL")

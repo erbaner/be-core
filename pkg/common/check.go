@@ -3,13 +3,14 @@ package common
 import (
 	"encoding/json"
 	"errors"
-	"github.com/mitchellh/mapstructure"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
 	"runtime"
+
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/mitchellh/mapstructure"
 )
 
 //var validate *validator.Validate

@@ -2,10 +2,11 @@ package test
 
 import (
 	"fmt"
-	"open_im_sdk/open_im_sdk"
-	"open_im_sdk/pkg/log"
-	api "open_im_sdk/pkg/server_api_params"
-	"open_im_sdk/pkg/utils"
+
+	"github.com/erbaner/be-core/open_im_sdk"
+	"github.com/erbaner/be-core/pkg/log"
+	api "github.com/erbaner/be-core/pkg/server_api_params"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 type testSignalingListener struct {
@@ -27,12 +28,10 @@ func (s *testSignalingListener) OnInviteeRejected(inviteeRejectedCallback string
 	log.Info("", utils.GetSelfFuncName(), "listener ", inviteeRejectedCallback)
 }
 
-//
 func (s *testSignalingListener) OnInvitationCancelled(invitationCancelledCallback string) {
 	log.Info("", utils.GetSelfFuncName(), "listener ", invitationCancelledCallback)
 }
 
-//
 func (s *testSignalingListener) OnInvitationTimeout(invitationTimeoutCallback string) {
 	log.Info("", utils.GetSelfFuncName(), "listener ", invitationTimeoutCallback)
 }

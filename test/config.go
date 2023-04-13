@@ -1,8 +1,9 @@
 package test
 
 import (
-	"open_im_sdk/pkg/constant"
 	"sync"
+
+	"github.com/erbaner/be-core/pkg/constant"
 )
 
 var LogLevel uint32 = 6

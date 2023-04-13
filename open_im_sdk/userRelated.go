@@ -2,14 +2,15 @@ package open_im_sdk
 
 import (
 	"errors"
-	"open_im_sdk/internal/login"
-	"open_im_sdk/open_im_sdk_callback"
-	"open_im_sdk/pkg/constant"
-	"open_im_sdk/pkg/log"
-	"open_im_sdk/pkg/utils"
 	"reflect"
 	"runtime"
 	"sync"
+
+	"github.com/erbaner/be-core/internal/login"
+	"github.com/erbaner/be-core/open_im_sdk_callback"
+	"github.com/erbaner/be-core/pkg/constant"
+	"github.com/erbaner/be-core/pkg/log"
+	"github.com/erbaner/be-core/pkg/utils"
 )
 
 func init() {
@@ -20,10 +21,10 @@ func init() {
 
 var UserSDKRwLock sync.RWMutex
 
-//用于web和pc的userMap
+// 用于web和pc的userMap
 var UserRouterMap map[string]*login.LoginMgr
 
-//客户端独立的user类
+// 客户端独立的user类
 var userForSDK *login.LoginMgr
 
 func GetUserWorker(uid string) *login.LoginMgr {

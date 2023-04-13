@@ -1,9 +1,9 @@
 package indexdb
 
 import (
-	"open_im_sdk/pkg/db/model_struct"
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/wasm/indexdb/temp_struct"
+	"github.com/erbaner/be-core/pkg/db/model_struct"
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/wasm/indexdb/temp_struct"
 )
 
 type LocalChatLogs struct {

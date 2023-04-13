@@ -1,9 +1,10 @@
 package event_listener
 
 import (
-	"open_im_sdk/pkg/utils"
-	"open_im_sdk/sdk_struct"
 	"syscall/js"
+
+	"github.com/erbaner/be-core/pkg/utils"
+	"github.com/erbaner/be-core/sdk_struct"
 )
 
 type ConnCallback struct {
