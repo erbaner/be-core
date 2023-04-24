@@ -4,22 +4,28 @@ NAME=ws_wrapper/cmd/open_im_sdk_server
 BIN_DIR=../../bin/
 LAN_FILE=.go
 GO_FILE:=${NAME}${LAN_FILE}
-OS:= $(or $(os),linux)
+
+OS:= $(or $(os),$(RUN_OS))
+OS:= $(or $(OS),darwin)
 ARCH:=$(or $(arch),amd64)
+EX:=
 
 ifeq ($(OS),windows)
 
-BINARY_NAME=${NAME}.exe
+	BINARY_NAME=${NAME}.exe
 
 else
+	ifeq ($(OS),linux)
+		EX= CC=x86_64-linux-musl-gcc  CXX=x86_64-linux-musl-g++
+	endif
 
-BINARY_NAME=${NAME}
+	BINARY_NAME=${NAME}
 
 endif
 
 
 build:
-	CGO_ENABLED=1 GOOS=${OS} GOARCH=${ARCH} go build -o ${BINARY_NAME}  ${GO_FILE}
+	GO111MODULE=on CGO_ENABLED=1 GOOS=${OS} GOARCH=${ARCH} ${EX} go build -o ${BINARY_NAME}  ${GO_FILE}
 install:build
 	mv ${BINARY_NAME} ${BIN_DIR}
 clean:
@@ -42,3 +48,7 @@ ios:
 android:
 	go get golang.org/x/mobile/bind
 	GOARCH=amd64 gomobile bind -v -trimpath -ldflags="-s -w" -o ./open_im_sdk.aar -target=android ./open_im_sdk/ ./open_im_sdk_callback/
+
+
+
+
